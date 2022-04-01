@@ -1,17 +1,25 @@
 import { useState } from "react"
+import { getInfoFromCep } from "../../services/cep"
 
 export default function CepInfo() {
 
     const [cep, setCep] = useState("{codigo_cep}")
+    const [inputError, setInputError] = useState(false)
 
     const handleCepChange = e => {
-        console.log(e.target.value)
+        setInputError(false)
         if (e.target.value == "") setCep("{codigo_cep}")
         else setCep(e.target.value)
     }
 
-    const handleClick = () => {
-        console.log('oi')
+    const handleClick = async () => {
+        let info
+        if (cep !== "{codigo_cep}") info = await getInfoFromCep(cep)
+        else setInputError(true)
+        if (info?.status == 200) {
+            setInputError(false)
+            console.log(info.data)
+        }
     }
 
     return (
@@ -31,7 +39,7 @@ export default function CepInfo() {
                     <input 
                         type="text"
                         placeholder="CEP"
-                        className="focus:border-0 focus:outline-none w-1/2"
+                        className={`w-1/2 pl-1 rounded-md focus:outline-none ${inputError ? "border-red-600 border-[1px]" : "focus:border-0"}`}
                         onChange={handleCepChange}
                     />
                     <p className="font-bold hidden sm:block">Necessário</p>

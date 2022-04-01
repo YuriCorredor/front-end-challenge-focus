@@ -1,18 +1,17 @@
 const url = "https://homologacao.focusnfe.com.br/v2/ceps"
 let options = {
-    method: 'GET',
+    method: 'POST',
     headers: {
-        'Authorization': `Basic `,
-        'Access-Control-Allow-Origin': '*'
-    }
+        'Content-type': 'application/json; charset=UTF-8',
+    },
 }
 
 export const getInfoFromCep = async cep => {
     let info
+    options.body = JSON.stringify({cep})
 
-    const response = await fetch("/api/v1/cep")
+    const response = await fetch("/api/v1/cep", options)
     info = await response.json()
     
-    console.log(info)
     return info
 }
