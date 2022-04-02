@@ -21,6 +21,7 @@ export default function CepInfo() {
     const handleClick = async () => {
         let info
         if (cep !== "") {
+            setInfo("loading")
             info = await getInfoFromCep(cep)
             setInfo(info)
         } 
@@ -33,8 +34,8 @@ export default function CepInfo() {
                 <RequestInfo 
                     http={"GET"}
                     url={"/ceps/{codigo_cep}"}
-                    description={"Retorna informações sobre o CEP, como o Estado, a Cidade, o Bairro..."}
-                    overview={"Informações dado cep"}
+                    description={"Dado o CEP, retornamos informações sobre o mesmo, como o Estado, a Cidade, o Bairro e assim por diante."}
+                    overview={"Retorna informações dado CEP"}
                 />
                 <Parameters 
                     handleClick={handleClick}

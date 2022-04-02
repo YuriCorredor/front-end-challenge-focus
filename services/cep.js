@@ -11,7 +11,22 @@ export const getInfoFromCep = async cep => {
     options.body = JSON.stringify({cep})
 
     try {
-        const response = await fetch("/api/v1/cep", options)
+        const response = await fetch("/api/v1/CepInfo", options)
+        info = await response.json()
+    } catch (error) {
+        console.log(error)
+    }
+    
+    return info
+}
+
+export const getCepFromInfo = async params => {
+    let info
+    console.log(params)
+    options.body = JSON.stringify({params})
+
+    try {
+        const response = await fetch("/api/v1/InfoCep", options)
         info = await response.json()
     } catch (error) {
         console.log(error)

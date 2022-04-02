@@ -5,7 +5,7 @@ export default function Parameters({ handleClick, params, baseUrl, queryString }
             {params.map((param, index) => {
                 return (
                     <div key={index} className="text-text_primary text-sm flex border-2 p-1 mx-2 my-4 items-center justify-between">
-                    <p>{param.title}</p>
+                    <p className="break-normal w-1/4">{param.title}</p>
                     <input
                         type="text"
                         placeholder={param.placeholder}
@@ -17,7 +17,7 @@ export default function Parameters({ handleClick, params, baseUrl, queryString }
                 )
             })}
             <div className="flex flex-wrap flex-grow items-center">
-                <button onClick={handleClick} className="mx-2 w-fit p-2 font-medium text-[#F6F9FF] bg-primary hover:scale-110 hover:shadow-lg transition-all cursor-pointer">Enviar pedido</button>
+                <button onClick={handleClick} className="mx-2 w-fit p-2 font-medium text-[#F6F9FF] bg-primary hover:scale-110 hover:shadow-lg transition-all cursor-pointer">Enviar requisição</button>
                 <p className="mx-2 text-text_secondary font-semibold text-sm break-all">{baseUrl}{queryString}</p>
             </div>
         </div>

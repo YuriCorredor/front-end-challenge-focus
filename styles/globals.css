@@ -20,22 +20,22 @@ a {
 }
 
 /* width */
-.scrollbar ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 /* Track */
-.scrollbar ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
 /* Handle */
-.scrollbar ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: #2a7ae3;
 }
 
 /* Handle on hover */
-.scrollbar ::-webkit-scrollbar-thumb:hover {
-  background: #009454;
+::-webkit-scrollbar-thumb:hover {
+  background: #27ae60;
 }
