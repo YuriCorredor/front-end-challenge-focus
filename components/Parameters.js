@@ -2,11 +2,11 @@ export default function Parameters({ handleClick, params, baseUrl, queryString }
     return (
         <div className="w-full border-2 mt-6 lg:mt-0 lg:ml-6 p-2">
             <p>Parâmetros</p>
-            {params.map(param => {
+            {params.map((param, index) => {
                 return (
-                    <div className="text-text_primary text-sm flex border-2 p-1 mx-2 my-4 items-center justify-between">
+                    <div key={index} className="text-text_primary text-sm flex border-2 p-1 mx-2 my-4 items-center justify-between">
                     <p>{param.title}</p>
-                    <input 
+                    <input
                         type="text"
                         placeholder={param.placeholder}
                         className={`w-1/2 pl-1 rounded-md focus:outline-none ${param.inputError ? "border-red-600 border-[1px]" : "focus:border-0"}`}

@@ -6,7 +6,7 @@ import RequestInfo from "../RequestInfo"
 
 export default function CepInfo() {
 
-    const [cep, setCep] = useState("{codigo_cep}")
+    const [cep, setCep] = useState("")
     const [inputError, setInputError] = useState(false)
     const [info, setInfo] = useState("idle")
     const [queryString, setQueryString] = useState("{codigo_cep}")

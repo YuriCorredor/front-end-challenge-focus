@@ -10,8 +10,12 @@ export const getInfoFromCep = async cep => {
     let info
     options.body = JSON.stringify({cep})
 
-    const response = await fetch("/api/v1/cep", options)
-    info = await response.json()
+    try {
+        const response = await fetch("/api/v1/cep", options)
+        info = await response.json()
+    } catch (error) {
+        console.log(error)
+    }
     
     return info
 }
