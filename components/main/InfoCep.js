@@ -14,9 +14,10 @@ export default function InfoCep() {
     const [info, setInfo] = useState("")
 
     const queryStringHelper = (prevString, condition, e, state) => {
+        console.log(prevString)
         if (prevString.includes(condition)) {            
             const startNum = prevString.indexOf(condition)
-            const endNum = startNum + state.length + condition.length + 1
+            const endNum = startNum + state.length + condition.length
             const subString = prevString.substring(startNum, endNum)
             prevString = prevString.replace(subString, `${condition}${e.target.value}`)
         } else {
