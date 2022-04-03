@@ -18,7 +18,7 @@ const code = `const base = require("base-64")
 
 export default function HowItWorks() {
     return (
-        <div className="w-full flex flex-col mt-32 p-2 break-normal">
+        <div className="w-full flex flex-col mt-14 p-2 break-normal">
             <div className="w-full flex flex-col p-2 py-4 sm:p-8 self-center font-semibold">
                 <h1 className="text-text_primary text-3xl self-center mb-6">Como a API funciona</h1>
                 <p className="text-text_secondary">
