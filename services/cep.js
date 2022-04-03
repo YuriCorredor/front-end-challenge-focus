@@ -22,7 +22,6 @@ export const getInfoFromCep = async cep => {
 
 export const getCepFromInfo = async params => {
     let info
-    console.log(params)
     options.body = JSON.stringify({params})
 
     try {
