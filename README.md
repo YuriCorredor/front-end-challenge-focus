@@ -80,7 +80,7 @@ yarn install
 
 <br>
 
-<p>Antes de iniciar o servidor, é necessário inserir a sua chave da API no arquivo .env.local, caso contrário os requests à API retornaram com erro e o APP não funcionará como deveria.</p>
+<p>Antes de iniciar o servidor, é necessário inserir a sua chave da API no arquivo .env.local, caso contrário os requests à API retornarão com erro e o APP não funcionará como deveria.</p>
 
 
 ```bash
