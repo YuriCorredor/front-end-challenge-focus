@@ -6,11 +6,7 @@ Visite o site [AQUI](https://front-end-challenge-focus.vercel.app/).
 
 <h3>Qual foi seu maior desafio na solução deste problema?</h3>
 
-<p>Conceitualizar e desenvolver um Design que fizesse sentido com a identidade visual da empresa foi desafiante, assim como utilizar os blocos de código, coisa que nunca havia feito antes e que acabei por utilizar uma biblioteca. Mas o que me foi mais desafiador foi pensar em como realizar o desafio mantendo em mente quem seria o usuário final. Caso se tratasse de um trabalho, quem seria o usuário final do site? Essa foi a minha pergunta durante todo o processo de desenvolvimento. Nesse caso, imaginei um potencial cliente da Focus, e fiz um site orientado à isso.</p>
-
-<br>
-
-<p>A programação é apenas uma ferramenta para resolver problemas. Não programamos apenas por programar, programamos para resolver um problema ou para satisfazer um desejo. Programamos para criar produtos. Programamos para criar experiências. Programamos para criar.</p>
+<p>Conceitualizar e desenvolver um Design que fizesse sentido com a identidade visual da empresa foi desafiante, assim como utilizar os blocos de código, coisa que nunca havia feito antes e que acabei por utilizar uma biblioteca. Usar a API deles, apesar de nunca tê-lo feito antes, foi uma das etapas mais fáceis de todo o processo devido à ótima documentação disponibilizada por eles. O que me foi mais desafiador foi pensar em como realizar o desafio mantendo em mente quem seria o usuário final. Caso se tratasse de um trabalho, quem seria o usuário final do site? Essa foi a minha pergunta durante todo o processo de desenvolvimento. Nesse caso, imaginei um potencial cliente da Focus, e fiz um site orientado a isso.</p>
 
 <br>
 
@@ -89,7 +85,7 @@ yarn install
 
 ```bash
 # No arquivo .env.local, altere o campo com a sua chave
-ACCESS_TOKEN=<<YOUR ACCEESS TOKEN>>
+ACCESS_TOKEN=YOUR_ACCEESS_TOKEN
 ```
 
 <br>
@@ -109,4 +105,4 @@ yarn dev
 
 Visite o site [AQUI](https://front-end-challenge-focus.vercel.app/).
 
-![APP-OVERVIEW](/readme/1.gif)
+![APP-OVERVIEW](/public/overview.png)
