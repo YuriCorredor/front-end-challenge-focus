@@ -16,6 +16,6 @@ export default async function handler(req, res) {
         const info = await response.json()
         res.status(response.status).json({ data: info, status: response.status })
     } catch (error) {
-        res.status(500).json({ error, status: 500 })
+        res.status(500).json({ data: error, status: 500 })
     }
 }
