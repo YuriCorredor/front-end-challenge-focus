@@ -1,4 +1,4 @@
-import { encode } from "base-64";
+import { encode } from "base-64"
 
 const token = process.env.ACCESS_TOKEN
 let url = "https://homologacao.focusnfe.com.br/v2/ceps"
@@ -10,7 +10,7 @@ export default async function handler(req, res) {
         const response = await fetch(`${url}/${cep}`, {
             method: "GET",
             headers: {
-                "Authorization": `${encode(`${token}`)}`
+                "Authorization": encode(token)
             }
         })
         const info = await response.json()

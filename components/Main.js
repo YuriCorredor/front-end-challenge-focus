@@ -1,6 +1,7 @@
 import Home from "./main/Home"
 import CepInfo from "./main/CepInfo"
 import InfoCep from "./main/InfoCep"
+import HowItWorks from "./HowItWorks"
 
 export default function Main() {
     return (
@@ -9,6 +10,7 @@ export default function Main() {
                 <Home />
                 <CepInfo />
                 <InfoCep />
+                <HowItWorks />
             </div>
         </div>
     )

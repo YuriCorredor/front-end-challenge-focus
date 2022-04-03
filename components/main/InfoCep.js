@@ -14,7 +14,6 @@ export default function InfoCep() {
     const [info, setInfo] = useState("")
 
     const queryStringHelper = (prevString, condition, e, state) => {
-        console.log(prevString)
         if (prevString.includes(condition)) {            
             const startNum = prevString.indexOf(condition)
             const endNum = startNum + state.length + condition.length
@@ -104,7 +103,7 @@ export default function InfoCep() {
                 <RequestInfo 
                     http={"GET"}
                     url={"/ceps?{parametros}"}
-                    description={"Dado informações, como a localidade, logadouro, UF e assim por diante, retornamos o CEP. É necessário preencher ao menos dois campos para que a requisição seja feita corretamente (com exceção de Municípios que possuem um único CEP, nesse caso é possível realizar a consulta informando apenas o Código IBGE)."}
+                    description={"Dado informações, como a localidade, logradouro, UF e assim por diante, retornamos o CEP e algumas informações. É necessário preencher ao menos dois campos para que a requisição seja feita corretamente (com exceção de Municípios que possuem um único CEP, nesse caso é possível realizar a consulta informando apenas o Código IBGE)."}
                     overview={"Retorna o CEP e informações dado informações"}
                 />
                 <Parameters 

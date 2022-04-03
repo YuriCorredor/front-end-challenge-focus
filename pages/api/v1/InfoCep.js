@@ -27,7 +27,7 @@ export default async function handler(req, res) {
         const response = await fetch(`${url}?${queryString}`, {
             method: "GET",
             headers: {
-                "Authorization": `${encode(`${token}`)}`
+                "Authorization": encode(token)
             }
         })
         const info = await response.json()
