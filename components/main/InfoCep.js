@@ -6,7 +6,7 @@ import { getCepFromInfo } from "../../services/cep"
 
 export default function InfoCep() {
 
-    const [ibgeCode, setIbgeCode] = useState("123456")
+    const [ibgeCode, setIbgeCode] = useState("")
     const [uf, setUf] = useState("")
     const [place, setPlace] = useState("")
     const [locality, setLocality] = useState("")
