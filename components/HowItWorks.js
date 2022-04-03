@@ -2,18 +2,17 @@ import { CopyBlock, tomorrowNightEighties } from "react-code-blocks"
 
 const code = `const base = require("base-64")
 
-(async () => {
-    const token = "token_secreto"
-    let url_desenvolvimento = "https://homologacao.focusnfe.com.br/v2/{algum_end_point}"
-    let url_producao = "https://api.focusnfe.com.br/v2/{algum_end_point}"
-    const response = await fetch(url_desenvolvimento, {
-        method: "GET",
-        headers: {
-            "Authorization": base.encode(token)
-        }
-    })
-    const info = await response.json()
-}) ()
+const token = "token_secreto"
+
+let url_desenvolvimento = "https://homologacao.focusnfe.com.br/v2/{algum_endpoint}"
+let url_producao = "https://api.focusnfe.com.br/v2/{algum_endpoint}"
+
+const response = await fetch(url_desenvolvimento, {
+    method: "GET",
+    headers: {
+        "Authorization": base.encode(token)
+    }
+})
 `
 
 export default function HowItWorks() {
