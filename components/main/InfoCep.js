@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Parameters from "../Parameters"
 import CodeBlock from "../CodeBlock"
 import RequestInfo from "../RequestInfo"
@@ -13,12 +13,14 @@ export default function InfoCep() {
     const [queryString, setQueryString] = useState("")
     const [info, setInfo] = useState("")
 
+    useEffect(() => {
+        if (queryString == "") setQueryString("{parametros}")
+    }, [queryString])
+
     const queryStringHelper = (prevString, condition, e, state) => {
+        if (prevString.includes("{parametros}")) prevString = ""
         if (prevString.includes(condition)) {            
-            const startNum = prevString.indexOf(condition)
-            const endNum = startNum + state.length + condition.length
-            const subString = prevString.substring(startNum, endNum)
-            prevString = prevString.replace(subString, `${condition}${e.target.value}`)
+            prevString = prevString.replace(`${condition}${state}`, `${condition}${e.target.value}`)
         } else {
             prevString += `${condition}${e.target.value}`
         }
