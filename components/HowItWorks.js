@@ -21,7 +21,7 @@ export default function HowItWorks() {
             <div className="w-full flex flex-col p-2 py-4 sm:p-8 self-center font-semibold">
                 <h1 className="text-text_primary text-3xl self-center mb-6">Como a API funciona</h1>
                 <p className="text-text_secondary">
-                    Nós exemplos acima as requisições são feitas por um servidor, que conecta-se aos servidores da FOCUS
+                    Nos exemplos acima as requisições são feitas por um servidor, que conecta-se aos servidores da FOCUS
                     utilizando o método HTTP Basic Auth para autenticação com um token fornecido por eles. <span className="text-primary hover:underline transition-all"><a rel="noreferrer" target="_blank" href="https://focusnfe.com.br/doc/?javascript#introducao_autenticacao">Saiba mais.</a></span>
                 </p>
                 <p className="text-text_secondary mt-2">
